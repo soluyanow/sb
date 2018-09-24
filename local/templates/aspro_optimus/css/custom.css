@@ -1,0 +1,159 @@
+/*NOTE: This file is intended for programmers. Aspro technical support is not advised to work with him.*/
+
+/* Examples (uncomment to use):*/
+
+/* Expand site width */
+/* body .wrapper { max-width: 1400px !important;  } */
+
+/* Set site background image */
+/* body {  background: url(image_source) top no-repeat; }
+
+/* Hide compare button */
+/* a.compare_item { display: none !important;  }*/
+
+.basket_fast_order {
+display: none !important;
+
+}
+
+.logo_wrapp img {
+	width: 220px !important;
+	height: auto !important;
+}
+
+.fastorder {
+	display: none !important;
+}
+
+.bx-soa-more-btn {
+	display: table;
+	margin-right: 0px;
+	position: relative;
+	margin-left: auto;
+}
+
+.bx-soa-more-btn button,
+.btn-order-save {
+	color: #fff;
+	display: inline-block;
+	padding: 6px 12px;
+	margin-bottom: 0;
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 1.42857143;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	-ms-touch-action: manipulation;
+	touch-action: manipulation;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	background-image: none;
+	border: 1px solid transparent;
+	border-top-color: transparent;
+	border-right-color: transparent;
+	border-bottom-color: transparent;
+	border-left-color: transparent;
+	border-top-color: transparent;
+	border-right-color: transparent;
+	border-bottom-color: transparent;
+	border-left-color: transparent;
+	border-radius: 4px;
+	-webkit-transition: background 280ms ease,opacity 280ms ease,color 280ms ease,border 280ms ease;
+	-moz-transition: background 280ms ease,opacity 280ms ease,color 280ms ease,border 280ms ease;
+	-ms-transition: background 280ms ease,opacity 280ms ease,color 280ms ease,border 280ms ease;
+	-o-transition: background 280ms ease,opacity 280ms ease,color 280ms ease,border 280ms ease;
+	transition: background 280ms ease,opacity 280ms ease,color 280ms ease,border 280ms ease;
+	background: #0071bb;
+	border-color: #0071bb;
+}
+
+.btn-order-save {
+	width: 250px !important;
+}
+
+.btn-order-save:hover {
+	#color: #fff;
+	background: #fff;
+}
+
+.form-check-group {
+	font-size: 15px;
+}
+
+.form-check-group label {
+	margin-left: 15px;
+}
+
+.bx-soa-custom-label {
+	display: block !important;
+	margin-bottom: 15px !important;
+	margin-top: 50px !important;
+}
+
+.bx-soa-location-input-container {
+	margin-top: 60px;
+	margin-bottom: 5px;
+}
+
+.form-check {
+	display: block;
+	width: 30%;
+	margin-top: 0px;
+	margin-bottom: 10px;
+	left: 0px;
+}
+
+.form-check #radio3 {
+
+}
+
+.form-check #radio4 {
+
+}
+
+.mb-5 .col,
+.mb-2 strong {
+	height: 25px;
+	color: #333;
+	font-size: 16px;
+}
+
+.col-auto {
+	float: left;
+	margin-top: 15px;
+}
+
+.bx-soa-pp-desc-container {
+	margin-top: 20px;
+}
+
+
+
+/*
+.form-check input {
+	display: none;
+}
+
+.form-check label::before {
+	content: "";
+	display: block;
+	width: 20px;
+	height: 20px;
+	position: relative;
+	background: #fbfbfb;
+	background-color: rgb(251, 251, 251);
+	border: 1px solid #e9e9e9;
+	border-radius: 100%;
+	float: left;
+}
+*/
+
+
+
+
+
+

@@ -1,0 +1,1 @@
+<img alt="companypic.png" src="<?=SITE_DIR?>images/template/logo.png" title="companypic.png">

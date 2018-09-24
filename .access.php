@@ -1,0 +1,17 @@
+<?
+$PERM["online"]["*"]="R";
+$PERM["desktop_app"]["*"]="R";
+$PERM["1673aebed62a5bc7433b45e3cecb9e57"]["2"]="X";
+$PERM["1673aebed62a5bc7433b45e3cecb9e57"]["5"]="X";
+$PERM["1673aebed62a5bc7433b45e3cecb9e57"]["3"]="X";
+$PERM["1673aebed62a5bc7433b45e3cecb9e57"]["4"]="X";
+$PERM["1673aebed62a5bc7433b45e3cecb9e57"]["6"]="X";
+$PERM["1673aebed62a5bc7433b45e3cecb9e57"]["7"]="X";
+$PERM["1673aebed62a5bc7433b45e3cecb9e57"]["*"]="X";
+$PERM["personal"]["7"]="W";
+$PERM["catalog"]["7"]="W";
+$PERM["news"]["7"]="W";
+$PERM["about"]["7"]="W";
+$PERM["index.php"]["7"]="W";
+$PERM["/"]["*"]="R";
+?>

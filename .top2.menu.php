@@ -1,0 +1,39 @@
+<?
+$aMenuLinks = Array(
+	Array(
+		"Распродажа", 
+		"/catalog/rasprodazha_1/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Новости и акции", 
+		"/news/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Доставка", 
+		"/delivery/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Оплата", 
+		"/payment/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Гарантии и сервис", 
+		"/guarantee/", 
+		Array(), 
+		Array(), 
+		"" 
+	)
+);
+?>
