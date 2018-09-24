@@ -1,7 +1,7 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetPageProperty("viewed_show", "Y");
-$APPLICATION->SetTitle("Аспро: Optimus - Адаптивный интернет-магазин");
+$APPLICATION->SetTitle("Склад бытовой техники - Интернет магазин");
 ?>
 
 <?$APPLICATION->IncludeComponent("bitrix:main.include", ".default",
