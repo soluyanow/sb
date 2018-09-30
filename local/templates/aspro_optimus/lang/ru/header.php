@@ -87,4 +87,8 @@ $MESS["FILTER_HIDE_VALUES"] = "Свернуть";
 $MESS["FULL_ORDER"] = "Полный заказ";
 $MESS["ITEM_ECONOMY"] = "Экономия";
 $MESS['JS_FORMAT_ORDER'] = 'имеет неверный формат';
+
+$MESS["LOGIN"] = 'Войти на сайт';
+$MESS["PERSONAL"] = 'Личный кабинет';
+
 ?>

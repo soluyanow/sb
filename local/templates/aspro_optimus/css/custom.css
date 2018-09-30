@@ -11,18 +11,14 @@
 /* Hide compare button */
 /* a.compare_item { display: none !important;  }*/
 
-.basket_fast_order {
-display: none !important;
-
+.basket_fast_order,
+.fastorder {
+	display: none !important;
 }
 
 .logo_wrapp img {
 	width: 220px !important;
 	height: auto !important;
-}
-
-.fastorder {
-	display: none !important;
 }
 
 .bx-soa-more-btn {
@@ -33,7 +29,10 @@ display: none !important;
 }
 
 .bx-soa-more-btn button,
-.btn-order-save {
+.btn-order-save,
+.auth,
+.exit,
+.pull-right {
 	color: #fff;
 	display: inline-block;
 	padding: 6px 12px;
@@ -69,6 +68,20 @@ display: none !important;
 	transition: background 280ms ease,opacity 280ms ease,color 280ms ease,border 280ms ease;
 	background: #0071bb;
 	border-color: #0071bb;
+}
+
+.pull-right {
+	/*width: 75px;
+	height: 30px;*/
+}
+
+.auth:hover {
+	background: #fff;
+	color: #333;
+}
+
+#exit_btn img {
+	height: 100%;
 }
 
 .btn-order-save {
@@ -131,29 +144,46 @@ display: none !important;
 	margin-top: 20px;
 }
 
-
-
-/*
-.form-check input {
-	display: none;
+.bg_image_site {
+	background-attachment: fixed;
 }
 
-.form-check label::before {
-	content: "";
+.auth_block {
+	width: 200px;
+	display: block;
+	height: 35px;
+	text-align: center !important;
+	margin-left: 25px;
+	margin-top: 10px;
+	margin-right: -10px;
+}
+
+.auth_block .exit {
+	height: 20px;
+	width: 10px;
+	#display: none;
+}
+
+.exit img {
 	display: block;
 	width: 20px;
-	height: 20px;
-	position: relative;
-	background: #fbfbfb;
-	background-color: rgb(251, 251, 251);
-	border: 1px solid #e9e9e9;
-	border-radius: 100%;
-	float: left;
+	margin-left: -4px;
 }
-*/
 
+.middle_phone {
+	margin-top: -22px !important;
+}
 
+.exit {
+	height: 20px;
+	#display: none;
+}
 
+.bx-soa-item-info-container {
+	display: none !important;
+}
 
-
+#bx-soa-orderSave {
+	display: none !important
+}
 

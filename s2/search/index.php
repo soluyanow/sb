@@ -3,7 +3,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Поиск");
 ?><?$APPLICATION->IncludeComponent(
 	"bitrix:catalog.search", 
-	"main",
+	"main", 
 	array(
 		"IBLOCK_TYPE" => "catalog",
 		"IBLOCK_ID" => "13",
@@ -46,7 +46,7 @@ $APPLICATION->SetTitle("Поиск");
 		"USE_PRODUCT_QUANTITY" => "N",
 		"CONVERT_CURRENCY" => "N",
 		"RESTART" => "Y",
-		"NO_WORD_LOGIC" => "N",
+		"NO_WORD_LOGIC" => "Y",
 		"USE_LANGUAGE_GUESS" => "N",
 		"CHECK_DATES" => "N",
 		"PAGER_TEMPLATE" => "modern",
@@ -72,7 +72,10 @@ $APPLICATION->SetTitle("Поиск");
 		"OFFERS_SORT_ORDER2" => "desc",
 		"OFFERS_CART_PROPERTIES" => array(
 		),
-		"COMPONENT_TEMPLATE" => "search-catalog"
+		"COMPONENT_TEMPLATE" => "main",
+		"HIDE_NOT_AVAILABLE_OFFERS" => "N",
+		"COMPOSITE_FRAME_MODE" => "A",
+		"COMPOSITE_FRAME_TYPE" => "AUTO"
 	),
 	false
 );?><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
