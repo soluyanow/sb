@@ -123,9 +123,9 @@
 															);?>
 														</span>
 													</span>
-													<span class="order_wrap_btn">
+													<?/*<span class="order_wrap_btn">
 														<span class="callback_btn"><?=GetMessage('CALLBACK')?></span>
-													</span>
+													</span>*/?>
 												</div>
 											</div>
 											<div class="social_wrapper">

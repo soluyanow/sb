@@ -482,6 +482,7 @@ $APPLICATION->IncludeComponent(
 		"DETAIL_EXPANDABLES_TITLE" => "Аксессуары",
 		"DETAIL_ASSOCIATED_TITLE" => "Похожие товары",
 		"COMPATIBLE_MODE" => "Y",
+		"EMPTY_SECTIONS_SHOW" => "Y",
 		"SEF_URL_TEMPLATES" => array(
 			"sections" => "",
 			"section" => "#SECTION_CODE_PATH#/",

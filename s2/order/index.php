@@ -39,7 +39,7 @@ $APPLICATION->SetTitle("Оформление заказа");
 		"BASKET_IMAGES_SCALING" => "adaptive",
 		"ALLOW_USER_PROFILES" => "N",
 		"TEMPLATE_THEME" => "blue",
-		"SHOW_TOTAL_ORDER_BUTTON" => "Y",
+		"SHOW_TOTAL_ORDER_BUTTON" => "N",
 		"SHOW_PAY_SYSTEM_LIST_NAMES" => "Y",
 		"SHOW_PAY_SYSTEM_INFO_NAME" => "Y",
 		"SHOW_DELIVERY_LIST_NAMES" => "Y",
@@ -74,7 +74,6 @@ $APPLICATION->SetTitle("Оформление заказа");
 			1 => "PROPS",
 			2 => "NOTES",
 			3 => "PRICE_FORMATED",
-			4 => "WEIGHT_FORMATED",
 		),
 		"ADDITIONAL_PICT_PROP_13" => "-",
 		"ADDITIONAL_PICT_PROP_14" => "-",
@@ -99,7 +98,7 @@ $APPLICATION->SetTitle("Оформление заказа");
 		"USE_CUSTOM_ADDITIONAL_MESSAGES" => "N",
 		"USE_CUSTOM_ERROR_MESSAGES" => "N",
 		"SHOW_ORDER_BUTTON" => "final_step",
-		"SKIP_USELESS_BLOCK" => "N",
+		"SKIP_USELESS_BLOCK" => "Y",
 		"SERVICES_IMAGES_SCALING" => "standard",
 		"COMPOSITE_FRAME_MODE" => "A",
 		"COMPOSITE_FRAME_TYPE" => "AUTO",
@@ -131,7 +130,10 @@ $APPLICATION->SetTitle("Оформление заказа");
 		"USE_ENHANCED_ECOMMERCE" => "N",
 		"EMPTY_BASKET_HINT_PATH" => "/",
 		"HIDE_ORDER_DESCRIPTION" => "N",
-		"SHOW_ORDER_DETAIL" => "Y"
+		"SHOW_ORDER_DETAIL" => "Y",
+		"SKIP_ACTIONS_IF_PICKUP" => "Y",
+		"DILIVERY_ID" => "2",
+		"PICKUP_DELIVERY_ID" => "2"
 	),
 	false
 );?>
