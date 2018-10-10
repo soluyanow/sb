@@ -16,7 +16,7 @@ $APPLICATION->SetTitle("Авторизация");
 }elseif( !empty( $_REQUEST["backurl"] ) ){
 	LocalRedirect( $_REQUEST["backurl"] );
 }else{
-	LocalRedirect(SITE_DIR.'personal/');
+	LocalRedirect(SITE_DIR.'index.php');
 }?>	
 	
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

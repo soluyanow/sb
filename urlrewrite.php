@@ -48,20 +48,20 @@ $arUrlRewrite=array (
     'PATH' => '/s2/contacts/stores/index.php',
     'SORT' => 100,
   ),
-  13 => 
-  array (
-    'CONDITION' => '#^/s2/personal/order/#',
-    'RULE' => '',
-    'ID' => 'bitrix:sale.personal.order',
-    'PATH' => '/s2/personal/order/index.php',
-    'SORT' => 100,
-  ),
   3 => 
   array (
     'CONDITION' => '#^/online/(/?)([^/]*)#',
     'RULE' => '',
     'ID' => '',
     'PATH' => '/desktop_app/router.php',
+    'SORT' => 100,
+  ),
+  13 => 
+  array (
+    'CONDITION' => '#^/s2/personal/order/#',
+    'RULE' => '',
+    'ID' => 'bitrix:sale.personal.order',
+    'PATH' => '/s2/personal/order/index.php',
     'SORT' => 100,
   ),
   4 => 
@@ -80,14 +80,6 @@ $arUrlRewrite=array (
     'PATH' => '/s2/info/articles/index.php',
     'SORT' => 100,
   ),
-  16 => 
-  array (
-    'CONDITION' => '#^/s2/info/article/#',
-    'RULE' => '',
-    'ID' => 'bitrix:news',
-    'PATH' => '/s2/info/article/index.php',
-    'SORT' => 100,
-  ),
   15 => 
   array (
     'CONDITION' => '#^/s2/company/news/#',
@@ -96,12 +88,12 @@ $arUrlRewrite=array (
     'PATH' => '/s2/company/news/index.php',
     'SORT' => 100,
   ),
-  17 => 
+  16 => 
   array (
-    'CONDITION' => '#^/s2/info/brands/#',
+    'CONDITION' => '#^/s2/info/article/#',
     'RULE' => '',
     'ID' => 'bitrix:news',
-    'PATH' => '/s2/info/brands/index.php',
+    'PATH' => '/s2/info/article/index.php',
     'SORT' => 100,
   ),
   5 => 
@@ -110,6 +102,14 @@ $arUrlRewrite=array (
     'RULE' => '',
     'ID' => 'bitrix:sale.personal.order',
     'PATH' => '/personal/order/index.php',
+    'SORT' => 100,
+  ),
+  17 => 
+  array (
+    'CONDITION' => '#^/s2/info/brands/#',
+    'RULE' => '',
+    'ID' => 'bitrix:news',
+    'PATH' => '/s2/info/brands/index.php',
     'SORT' => 100,
   ),
   6 => 
@@ -128,22 +128,6 @@ $arUrlRewrite=array (
     'PATH' => '/s2/info/brand/index.php',
     'SORT' => 100,
   ),
-  22 => 
-  array (
-    'CONDITION' => '#^/s2/landings/#',
-    'RULE' => '',
-    'ID' => 'bitrix:catalog',
-    'PATH' => '/s2/landings/index.php',
-    'SORT' => 100,
-  ),
-  19 => 
-  array (
-    'CONDITION' => '#^/s2/products/#',
-    'RULE' => '',
-    'ID' => 'bitrix:catalog',
-    'PATH' => '/s2/products/index.php',
-    'SORT' => 100,
-  ),
   20 => 
   array (
     'CONDITION' => '#^/s2/services/#',
@@ -160,6 +144,22 @@ $arUrlRewrite=array (
     'PATH' => '/s2/personal/index.php',
     'SORT' => 100,
   ),
+  19 => 
+  array (
+    'CONDITION' => '#^/s2/products/#',
+    'RULE' => '',
+    'ID' => 'bitrix:catalog',
+    'PATH' => '/s2/products/index.php',
+    'SORT' => 100,
+  ),
+  22 => 
+  array (
+    'CONDITION' => '#^/s2/landings/#',
+    'RULE' => '',
+    'ID' => 'bitrix:catalog',
+    'PATH' => '/s2/landings/index.php',
+    'SORT' => 100,
+  ),
   26 => 
   array (
     'CONDITION' => '#^/s2/catalog/#',
@@ -168,20 +168,20 @@ $arUrlRewrite=array (
     'PATH' => '/s2/catalog/index.php',
     'SORT' => 100,
   ),
-  23 => 
-  array (
-    'CONDITION' => '#^/s2/sale/#',
-    'RULE' => '',
-    'ID' => 'bitrix:news',
-    'PATH' => '/s2/sale/index.php',
-    'SORT' => 100,
-  ),
   7 => 
   array (
     'CONDITION' => '#^/catalog/#',
     'RULE' => '',
     'ID' => 'bitrix:catalog',
     'PATH' => '/catalog/index.php',
+    'SORT' => 100,
+  ),
+  23 => 
+  array (
+    'CONDITION' => '#^/s2/sale/#',
+    'RULE' => '',
+    'ID' => 'bitrix:news',
+    'PATH' => '/s2/sale/index.php',
     'SORT' => 100,
   ),
   8 => 

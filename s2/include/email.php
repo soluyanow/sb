@@ -1,1 +1,1 @@
-<a rel="nofollow" href="mailto:info@skladbita.ru">info@skladbita.ru</a>
+<a rel="nofollow" href="mailto:info@yandex.ru">skladbita48@yandex.ru</a>

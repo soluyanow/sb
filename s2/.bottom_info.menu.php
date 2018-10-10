@@ -27,13 +27,6 @@ $aMenuLinks = Array(
 		Array(), 
 		Array(), 
 		"" 
-	),
-	Array(
-		"Возможности", 
-		"/s2/info/more/", 
-		Array(), 
-		Array(), 
-		"" 
 	)
 );
 ?>

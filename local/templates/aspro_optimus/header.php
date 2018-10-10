@@ -97,21 +97,21 @@ $htmlClass = ($_REQUEST && isset($_REQUEST['print']) ? 'print' : false);
 										<?COptimus::ShowLogo();?>
 									</div>
 								</td>
-								<?/*<td class="text_wrapp">
-									<div class="slogan">
-										<?$APPLICATION->IncludeComponent("bitrix:main.include", ".default",
-											array(
-												"COMPONENT_TEMPLATE" => ".default",
-												"PATH" => SITE_DIR."include/top_page/slogan.php",
-												"AREA_FILE_SHOW" => "file",
-												"AREA_FILE_SUFFIX" => "",
-												"AREA_FILE_RECURSIVE" => "Y",
-												"EDIT_TEMPLATE" => "standard.php"
-											),
-											false
-										);?>
-									</div>
-								</td>*/?>
+                                <?/*<td class="text_wrapp">
+                                    <div class="slogan">
+                                        <?$APPLICATION->IncludeComponent("bitrix:main.include", ".default",
+                                            array(
+                                                "COMPONENT_TEMPLATE" => ".default",
+                                                "PATH" => SITE_DIR."include/top_page/slogan.php",
+                                                "AREA_FILE_SHOW" => "file",
+                                                "AREA_FILE_SUFFIX" => "",
+                                                "AREA_FILE_RECURSIVE" => "Y",
+                                                "EDIT_TEMPLATE" => "standard.php"
+                                            ),
+                                            false
+                                        );?>
+                                    </div>
+                                </td>*/?>
 								<td  class="center_block">
 									<div class="search">
 										<?$APPLICATION->IncludeComponent("bitrix:main.include", ".default",
@@ -127,6 +127,7 @@ $htmlClass = ($_REQUEST && isset($_REQUEST['print']) ? 'print' : false);
 										);?>
 									</div>
 								</td>
+
 								<td class="basket_wrapp">
 									<?if($TEMPLATE_OPTIONS["BASKET"]["CURRENT_VALUE"] == "NORMAL"){?>
 										<div class="wrapp_all_icons">
@@ -190,15 +191,49 @@ $htmlClass = ($_REQUEST && isset($_REQUEST['print']) ? 'print' : false);
 															);?>
 														</span>
 													</span>
-													<span class="order_wrap_btn">
-														<span class="callback_btn"><?=GetMessage("CALLBACK")?></span>
-													</span>
+													<?/*span class="order_wrap_btn">
+                                                        <?if (!$USER->IsAuthorized()) {?>
+                                                            <span class="login_btn" id="login_btn"><?=GetMessage("LOGIN")?></span>
+                                                        <?} else { ?>
+                                                            <span class="personal_btn" id="personal_btn"><?=GetMessage("PERSONAL")?></span>
+                                                        <?};?>
+													</span>*/?>
 												</span>
 											</div>
 										</div>
 									<?}?>
 									<div class="clearfix"></div>
 								</td>
+                                <td class="auth_block">
+                                    <div class="auth">
+                                        <?$APPLICATION->IncludeComponent("bitrix:main.include", ".default",
+                                            array(
+                                                "COMPONENT_TEMPLATE" => ".default",
+                                                "PATH" => SITE_DIR."include/top_page/auth.block.php",
+                                                "AREA_FILE_SHOW" => "file",
+                                                "AREA_FILE_SUFFIX" => "",
+                                                "AREA_FILE_RECURSIVE" => "Y",
+                                                "EDIT_TEMPLATE" => "standard.php"
+                                            ),
+                                            false
+                                        );?>
+                                    </div>
+                                    <?if ($USER->IsAuthorized()) {?>
+                                        <div class="exit">
+                                            <?$APPLICATION->IncludeComponent("bitrix:main.include", ".default",
+                                                array(
+                                                    "COMPONENT_TEMPLATE" => ".default",
+                                                    "PATH" => SITE_DIR."include/top_page/exit.block.php",
+                                                    "AREA_FILE_SHOW" => "file",
+                                                    "AREA_FILE_SUFFIX" => "",
+                                                    "AREA_FILE_RECURSIVE" => "Y",
+                                                    "EDIT_TEMPLATE" => "standard.php"
+                                                ),
+                                                false
+                                            );?>
+                                        </div>
+                                    <?};?>
+                                </td>
 							</tr>
 						</table>
 					</div>
