@@ -74,6 +74,7 @@ $APPLICATION->SetTitle("Оформление заказа");
 			1 => "PROPS",
 			2 => "NOTES",
 			3 => "PRICE_FORMATED",
+			4 => "WEIGHT_FORMATED",
 		),
 		"ADDITIONAL_PICT_PROP_13" => "-",
 		"ADDITIONAL_PICT_PROP_14" => "-",
@@ -98,7 +99,7 @@ $APPLICATION->SetTitle("Оформление заказа");
 		"USE_CUSTOM_ADDITIONAL_MESSAGES" => "N",
 		"USE_CUSTOM_ERROR_MESSAGES" => "N",
 		"SHOW_ORDER_BUTTON" => "final_step",
-		"SKIP_USELESS_BLOCK" => "Y",
+		"SKIP_USELESS_BLOCK" => "N",
 		"SERVICES_IMAGES_SCALING" => "standard",
 		"COMPOSITE_FRAME_MODE" => "A",
 		"COMPOSITE_FRAME_TYPE" => "AUTO",
@@ -132,7 +133,6 @@ $APPLICATION->SetTitle("Оформление заказа");
 		"HIDE_ORDER_DESCRIPTION" => "N",
 		"SHOW_ORDER_DETAIL" => "Y",
 		"SKIP_ACTIONS_IF_PICKUP" => "Y",
-		"DILIVERY_ID" => "2",
 		"PICKUP_DELIVERY_ID" => "2"
 	),
 	false
