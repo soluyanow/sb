@@ -4,7 +4,10 @@ It will not be overwritten when you upgrade solution.
 */
 
 $(document).ready(function() {
-    actionFunctions()
+    actionFunctions();
+    $(".reg-checkout-input").on("click", function() {
+        changeRegPage();
+    });
 });
 
 function actionFunctions() {
@@ -20,5 +23,28 @@ function actionFunctions() {
         window.location.replace("?logout=yes");
     });
 }
+
+function changeRegPage() {
+    $.each($(".reg-checkout input"), function(i, j) {
+        if (j.checked === true) {
+            $("."+j.value).css("display", "block");
+        } else {
+            $("."+j.value).css("display", "none");
+        }
+    });
+}
+
+function sendPartnerInfo() {
+    $(".send-info").click();
+}
+
+function tst() {
+    //$("#auth-col").replaceWith("<div class='auth-col'></div>");
+
+
+
+}
+
+
 
 

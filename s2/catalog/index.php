@@ -1,5 +1,25 @@
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Каталог");
+
+define("PARTNER_GROUP_ID", 9);
+$priceID = "BASE";
+$isPartner = false;
+if (in_array(PARTNER_GROUP_ID, $USER->GetUserGroupArray($USER->GetID()))) {
+    $isPartner = true;
+    $filter = Array
+    (
+        "ID"                  => $USER->GetID(),
+    );
+    if ($isPartner) {
+        $rsUsers = CUser::GetList(($by = "id"), ($order = "asc"), $filter, array("FIELDS" => array("ID", "NAME"), "SELECT" => array("UF_PARTNER_PRICE")));
+        while ($res = $rsUsers->GetNext()) {
+            if (isset($res["UF_PARTNER_PRICE"]) && !empty($res["UF_PARTNER_PRICE"])) {
+                $priceID = $res["UF_PARTNER_PRICE"];
+            }
+        }
+    }
+}
+
 $APPLICATION->IncludeComponent(
 	"bitrix:catalog", 
 	"main", 
@@ -113,8 +133,9 @@ $APPLICATION->IncludeComponent(
 		"COMPARE_ELEMENT_SORT_FIELD" => "shows",
 		"COMPARE_ELEMENT_SORT_ORDER" => "asc",
 		"DISPLAY_ELEMENT_SELECT_BOX" => "N",
+        "IS_PARTNER" => $isPartner,
 		"PRICE_CODE" => array(
-			0 => "BASE",
+			0 => $priceID,
 		),
 		"USE_PRICE_COUNT" => "N",
 		"SHOW_PRICE_COUNT" => "1",
