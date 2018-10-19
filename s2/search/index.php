@@ -1,10 +1,48 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Поиск");
-?><?$APPLICATION->IncludeComponent(
-	"bitrix:catalog.search", 
-	"main", 
+?>
+
+<?php
+define("PARTNER_GROUP_ID", 9);
+define("PARTNER_PRICE_ID", "UF_PARTNER_PRICE");
+
+$priceID = "BASE";
+$isPartner = false;
+if (in_array(PARTNER_GROUP_ID, $USER->GetUserGroupArray($USER->GetID()))) {
+    $isPartner = true;
+    $filter = Array
+    (
+        "ID"                  => $USER->GetID(),
+    );
+    if ($isPartner) {
+        $rsUsers = CUser::GetList(($by = "id"), ($order = "asc"), $filter, array("FIELDS" => array("ID", "NAME"), "SELECT" => array(PARTNER_PRICE_ID)));
+        while ($res = $rsUsers->GetNext()) {
+            if (isset($res[PARTNER_PRICE_ID]) && !empty($res[PARTNER_PRICE_ID])) {
+                $priceID = $res[PARTNER_PRICE_ID];
+            }
+        }
+    }
+}
+
+$template = "main";
+$sectionTemplatePrefix = "";
+if ($isPartner) {
+    $sectionTemplatePrefix = "_partner";
+}
+
+$template .= $sectionTemplatePrefix;
+?>
+
+<?$APPLICATION->IncludeComponent(
+	"bitrix:catalog.search",
+    $template,
 	array(
+        "IS_PARTNER" => $isPartner,
+        "SUBSECTION_TEMPLATE_PREFIX" => $sectionTemplatePrefix,
+        "PRICE_CODE" => array(
+            0 => $priceID,
+        ),
 		"IBLOCK_TYPE" => "catalog",
 		"IBLOCK_ID" => "13",
 		"ELEMENT_SORT_FIELD" => "sort",
@@ -34,17 +72,16 @@ $APPLICATION->SetTitle("Поиск");
 		"CACHE_TYPE" => "A",
 		"CACHE_TIME" => "36000000",
 		"DISPLAY_COMPARE" => "N",
-		"PRICE_CODE" => array(
-			0 => "BASE",
-		),
 		"USE_PRICE_COUNT" => "N",
 		"SHOW_PRICE_COUNT" => "1",
 		"PRICE_VAT_INCLUDE" => "Y",
-		"PRODUCT_PROPERTIES" => "",
+		"PRODUCT_PROPERTIES" => array(
+			0 => "F_USER",
+		),
 		"USE_PRODUCT_QUANTITY" => "N",
 		"CONVERT_CURRENCY" => "N",
-		"RESTART" => "N",
-		"NO_WORD_LOGIC" => "N",
+		"RESTART" => "Y",
+		"NO_WORD_LOGIC" => "Y",
 		"USE_LANGUAGE_GUESS" => "N",
 		"CHECK_DATES" => "N",
 		"PAGER_TEMPLATE" => "modern",

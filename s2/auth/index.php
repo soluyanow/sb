@@ -6,7 +6,7 @@ $APPLICATION->SetTitle("Авторизация");
 <?if(!$USER->IsAuthorized()){
 	$APPLICATION->IncludeComponent(
 		"bitrix:system.auth.form",
-		"main_org",
+		"main_mod",
 		Array(
 			"REGISTER_URL" => SITE_DIR."auth/registration/",
 			"PROFILE_URL" => SITE_DIR."auth/forgot-password/",

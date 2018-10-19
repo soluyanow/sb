@@ -196,23 +196,26 @@
 	width: 1100px;
 }
 
-.reg-checkout {
-	border-top: 2px solid #0071bb;
-}
-
-.form-block-no-border {
-	border-top: none !important;
-}
-
-.org-reg-page {
+.auth-page {
 	display: none;
 }
 
-.reg-checkout {
-	height: 50px;
-	line-height: 3.5em;
+.reg-page,
+.auth-page {
+	border-top: none !important;
 }
 
-.cust-reg-label {
-	margin-right: 50px;
+.reg-page-checkout {
+	border-top: 2px solid #0071bb;
+	padding-top: 10px;
+	padding-left: 20px;
+	padding-bottom: 10px;
+}
+
+.mf-text {
+	margin-bottom: 5px;
+}
+
+.reg-page-checkout {
+	#display: none;
 }

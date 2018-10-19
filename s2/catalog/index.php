@@ -2,6 +2,8 @@
 $APPLICATION->SetTitle("Каталог");
 
 define("PARTNER_GROUP_ID", 9);
+define("PARTNER_PRICE_ID", "UF_PARTNER_PRICE");
+
 $priceID = "BASE";
 $isPartner = false;
 if (in_array(PARTNER_GROUP_ID, $USER->GetUserGroupArray($USER->GetID()))) {
@@ -11,19 +13,32 @@ if (in_array(PARTNER_GROUP_ID, $USER->GetUserGroupArray($USER->GetID()))) {
         "ID"                  => $USER->GetID(),
     );
     if ($isPartner) {
-        $rsUsers = CUser::GetList(($by = "id"), ($order = "asc"), $filter, array("FIELDS" => array("ID", "NAME"), "SELECT" => array("UF_PARTNER_PRICE")));
+        $rsUsers = CUser::GetList(($by = "id"), ($order = "asc"), $filter, array("FIELDS" => array("ID", "NAME"), "SELECT" => array(PARTNER_PRICE_ID)));
         while ($res = $rsUsers->GetNext()) {
-            if (isset($res["UF_PARTNER_PRICE"]) && !empty($res["UF_PARTNER_PRICE"])) {
-                $priceID = $res["UF_PARTNER_PRICE"];
+            if (isset($res[PARTNER_PRICE_ID]) && !empty($res[PARTNER_PRICE_ID])) {
+                $priceID = $res[PARTNER_PRICE_ID];
             }
         }
     }
 }
 
+$template = "main";
+$sectionTemplatePrefix = "";
+if ($isPartner) {
+    $sectionTemplatePrefix = "_partner";
+}
+
+$template .= $sectionTemplatePrefix;
+
 $APPLICATION->IncludeComponent(
-	"bitrix:catalog", 
-	"main", 
+	"bitrix:catalog",
+    $template,
 	array(
+        "IS_PARTNER" => $isPartner,
+        "SUBSECTION_TEMPLATE_PREFIX" => $sectionTemplatePrefix,
+        "PRICE_CODE" => array(
+            0 => $priceID,
+        ),
 		"IBLOCK_TYPE" => "aspro_optimus_catalog",
 		"IBLOCK_ID" => "13",
 		"HIDE_NOT_AVAILABLE" => "Y",
@@ -40,7 +55,7 @@ $APPLICATION->IncludeComponent(
 		"AJAX_OPTION_STYLE" => "Y",
 		"AJAX_OPTION_HISTORY" => "Y",
 		"CACHE_TYPE" => "A",
-		"CACHE_TIME" => "3600000",
+		"CACHE_TIME" => "600",
 		"CACHE_FILTER" => "Y",
 		"CACHE_GROUPS" => "N",
 		"SET_TITLE" => "Y",
@@ -133,10 +148,6 @@ $APPLICATION->IncludeComponent(
 		"COMPARE_ELEMENT_SORT_FIELD" => "shows",
 		"COMPARE_ELEMENT_SORT_ORDER" => "asc",
 		"DISPLAY_ELEMENT_SELECT_BOX" => "N",
-        "IS_PARTNER" => $isPartner,
-		"PRICE_CODE" => array(
-			0 => $priceID,
-		),
 		"USE_PRICE_COUNT" => "N",
 		"SHOW_PRICE_COUNT" => "1",
 		"PRICE_VAT_INCLUDE" => "Y",
